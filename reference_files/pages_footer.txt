@@ -1,0 +1,6 @@
+<footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p class="mb-2">© 2025 VitalCore Academy</p>
+      <p class="text-sm">123 Wellness Street, Your City • (123) 456-7890 • hello@vitalcore.example</p>
+    </div>
+  </footer>

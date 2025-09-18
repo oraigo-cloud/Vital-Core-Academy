@@ -1,0 +1,6 @@
+  <script>
+    const btn = document.getElementById('menuBtn');
+    btn && btn.addEventListener('click', () => alert('Mobile menu placeholder — integrate a drawer or menu here'));
+  </script>
+</body>
+</html>

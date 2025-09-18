@@ -1,0 +1,30 @@
+<div class="container mx-auto px-6 py-12">
+    <a href="index.html" class="text-green-600 font-semibold">← Back to Home</a>
+    <h1 class="text-3xl font-bold mt-4 mb-6 text-blue-700">Programs</h1>
+
+    <section id="yoga" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Yoga for Balance</h2>
+      <p class="mb-4">A progressive 12-week track that emphasizes balance, mobility, and breath. Each class includes warm-up mobility, standing sequences, gentle seated work, and guided relaxation.</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Beginner-friendly progressions</li>
+        <li>Chair and mat options</li>
+        <li>Focus on joint health and posture</li>
+      </ul>
+    </section>
+
+    <section id="martial" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Martial Arts Basics</h2>
+      <p class="mb-4">Low-impact movement drills drawn from traditional forms. Emphasis on stance, balance, controlled striking mechanics (air-based), and simple partner drills for coordination.</p>
+      <ul class="list-disc pl-6 mb-4">
+        <li>Non-contact, safety-first instruction</li>
+        <li>Designed to improve gait, reaction time, and confidence</li>
+        <li>Adaptations for joint limitations</li>
+      </ul>
+    </section>
+
+    <section id="wellness" class="mb-10">
+      <h2 class="text-2xl font-semibold mb-3">Wellness Workshops</h2>
+      <p class="mb-4">Monthly workshops on breathing, sleep hygiene, nutrition for midlife, injury prevention and managing aches through movement.</p>
+      <p class="text-sm text-gray-600">Workshops can be added to any membership or booked separately.</p>
+    </section>
+  </div>
