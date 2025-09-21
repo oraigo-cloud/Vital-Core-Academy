@@ -3,24 +3,54 @@
     <h1 class="text-3xl font-bold mt-4 mb-6 text-green-700">Contact & Bookings</h1>
 
     <div class="grid md:grid-cols-2 gap-8">
-      <form class="space-y-4">
-        <input class="w-full p-3 rounded-lg border" placeholder="Full name" />
-        <input class="w-full p-3 rounded-lg border" placeholder="Email address" />
-        <input class="w-full p-3 rounded-lg border" placeholder="Phone (optional)" />
-        <select class="w-full p-3 rounded-lg border">
-          <option>Book Free Trial</option>
-          <option>Membership Inquiry</option>
-          <option>Workshop / Events</option>
-        </select>
-        <textarea class="w-full p-3 rounded-lg border" rows="5" placeholder="Message (tell us about your goals)"></textarea>
-        <button class="bg-green-600 text-white px-5 py-3 rounded-lg font-semibold">Send Message</button>
-      </form>
+      <form class="space-y-4" id="contactForm">
+      <input name="firstName" class="w-full p-3 rounded-lg border" placeholder="First Name" required />
+      <input name="lastName" class="w-full p-3 rounded-lg border" placeholder="Last Name" required />
+      <input name="email" type="email" class="w-full p-3 rounded-lg border" placeholder="Email address" required />
+      <input name="phone" class="w-full p-3 rounded-lg border" placeholder="Phone (optional)" />
+      <select name="interest" class="w-full p-3 rounded-lg border">
+        <option>Book Free Trial</option>
+        <option>Membership Inquiry</option>
+        <option>Workshop / Events</option>
+      </select>
+      <textarea name="message" class="w-full p-3 rounded-lg border" rows="5" placeholder="Message"></textarea>
+      <button class="bg-green-600 text-white px-5 py-3 rounded-lg font-semibold" type="submit">Send Message</button>
+    </form>
 
       <div class="p-6 bg-gray-50 rounded-2xl">
         <h3 class="text-xl font-semibold mb-2">Visit Us</h3>
-        <p class="text-sm text-gray-600 mb-4">123 Wellness Street, Your City • (123) 456-7890</p>
+        <p class="text-sm text-gray-600 mb-4">Solan, HP • 91 7985292092</p>
         <h4 class="font-semibold">Hours</h4>
         <p class="text-sm text-gray-600">Mon–Fri: 6:30am–8:30pm<br>Sat: 7:00am–2:00pm<br>Sun: Closed</p>
       </div>
     </div>
   </div>
+
+
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  let data = {
+    firstName: this.firstName.value,
+    lastName: this.lastName.value,
+    email: this.email.value,
+    phone: this.phone.value,
+    interest: this.interest.value,
+    message: this.message.value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbzOhg4R9d0xQBreyWlIaUYHtO5HpsfE4inYRhCPTrpx76jSFCZYamNXdzj9BciKBxvXSQ/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  })
+  .then(() => {
+    alert("✅ Thank you! Your message has been sent.");
+    this.reset();
+  })
+  .catch(err => alert("❌ Error: " + err));
+});
+</script>
